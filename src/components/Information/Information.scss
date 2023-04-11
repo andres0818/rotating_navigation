@@ -1,0 +1,21 @@
+.information {
+    position: absolute;
+    z-index: 2;
+    width: 100vw;
+    background-color: white;
+    transition: transform 0.5s linear;
+    transform-origin: top left;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 120px;
+    padding-top: 120px;
+
+    &__container {
+        width: 50%;
+        text-align: justify;
+    }
+
+    &__image {
+        width: 100%;
+    }
+}
