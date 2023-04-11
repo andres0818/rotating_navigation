@@ -1,8 +1,11 @@
-import { useState } from "react";
 import "./Nav.scss";
-const Nav = () => {
-  const [rotation, setRotation] = useState({ nav: 0, content: 0 });
 
+interface Props {
+  rotation: { nav: number; content?: number };
+  setRotation: (value: any) => void;
+}
+
+const Nav = ({ rotation, setRotation }: Props): JSX.Element => {
   const open = () => {
     const newRotation = { ...rotation, nav: 90 };
     setRotation(newRotation);
