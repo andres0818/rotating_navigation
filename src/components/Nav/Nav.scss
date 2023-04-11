@@ -1,0 +1,61 @@
+$colorPrimary: #ff7979;
+$colorText: white;
+
+.nav {
+    width: 200px;
+    height: 200px;
+    background-color: $colorPrimary;
+    border-radius: 500px;
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 60px;
+    transition: transform 0.5s linear;
+
+    &__open {
+        order: 1;
+        width: 25px;
+        height: 4px;
+        background-color: $colorText;
+        transform: translate(-50px, -27px);
+        position: relative;
+        border-radius: 8px;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            width: 25px;
+            height: 4px;
+            border-radius: 8px;
+            background-color: $colorText;
+            position: absolute;
+            transform: translateY(-8px);
+            cursor: pointer;
+
+        }
+
+        &::after {
+            content: '';
+            width: 25px;
+            height: 4px;
+            border-radius: 8px;
+            background-color: $colorText;
+            position: absolute;
+            transform: translateY(8px);
+            cursor: pointer;
+
+        }
+
+    }
+
+    &__close {
+        font-size: 50px;
+        color: $colorText;
+        transform: translate(-42px, -6px) rotate(45deg);
+        cursor: pointer;
+
+    }
+}
