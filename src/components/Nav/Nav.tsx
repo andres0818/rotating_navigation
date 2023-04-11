@@ -13,18 +13,31 @@ const Nav = () => {
   };
 
   return (
-    <div
-      style={{
-        transform: `rotate(-${rotation.nav}deg)`,
-      }}
-      className="nav"
-    >
-      <h1 onClick={open} className="nav__open">
-        {" "}
-      </h1>
-      <h1 onClick={close} className="nav__close">
-        +
-      </h1>
+    <div className="nav__container">
+      <div
+        style={{
+          transform: `rotate(-${rotation.nav}deg)`,
+        }}
+        className="nav"
+      >
+        <div onClick={open} className="nav__openContainer">
+          <h1 className="nav__open"> </h1>
+        </div>
+        <h1 onClick={close} className="nav__close">
+          +
+        </h1>
+      </div>
+      <div className="container">
+        <h1 className={rotation.nav === 0 ? `container__text` : "visible"}>
+          HOME
+        </h1>
+        <h1 className={rotation.nav === 0 ? `container__text` : "visible"}>
+          ABOUT
+        </h1>
+        <h1 className={rotation.nav === 0 ? `container__text` : "visible"}>
+          CONTACT
+        </h1>
+      </div>
     </div>
   );
 };
