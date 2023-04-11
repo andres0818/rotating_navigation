@@ -10,11 +10,6 @@ $backgroundColor: #333;
 
 .nav {
 
-    &__container {
-        background-color: $backgroundColor;
-        width: 100vw;
-        height: 100vh
-    }
 
     width: 200px;
     height: 200px;
@@ -28,6 +23,13 @@ $backgroundColor: #333;
     align-items: flex-end;
     gap: 60px;
     transition: transform 0.5s linear;
+    z-index: 3;
+
+    &__container {
+        background-color: $backgroundColor;
+        width: 100vw;
+        height: 100vh
+    }
 
     &__openContainer {
         transform: translate(-50px, -27px);
