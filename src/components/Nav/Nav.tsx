@@ -7,11 +7,11 @@ interface Props {
 
 const Nav = ({ rotation, setRotation }: Props): JSX.Element => {
   const open = () => {
-    const newRotation = { ...rotation, nav: 90 };
+    const newRotation = { content: 20, nav: 90 };
     setRotation(newRotation);
   };
   const close = () => {
-    const newRotation = { ...rotation, nav: 0 };
+    const newRotation = { content: 0, nav: 0 };
     setRotation(newRotation);
   };
 
