@@ -15,11 +15,14 @@ const Nav = ({ rotation, setRotation }: Props): JSX.Element => {
     setRotation(newRotation);
   };
 
+  const positionNav = rotation.nav === 0 ? "fixed" : "absolute";
+
   return (
     <div className="nav__container">
       <div
         style={{
           transform: `rotate(-${rotation.nav}deg)`,
+          position: positionNav,
         }}
         className="nav"
       >
